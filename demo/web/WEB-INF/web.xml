@@ -4,4 +4,31 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <display-name>ServletDemo</display-name>
+    <context-param>
+        <param-name>name12312</param-name>
+        <param-value>value123123</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>com.binyu.HelloServlet</servlet-class>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>value</param-value>
+        </init-param>
+        <init-param>
+            <param-name>name2</param-name>
+            <param-value>value2</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+<!--        url-pattern
+               / 匹配所有请求不包括jsp
+               /* 匹配所有请求包括jsp
+-->
+        <url-pattern>/hello</url-pattern>
+
+    </servlet-mapping>
+
 </web-app>
